@@ -18,7 +18,7 @@
 			
 			<header id="pageHeader" class="layoutFluid">
 				<div>
-					<nav id="topMenu" class="userPanel">
+					{#<nav id="topMenu" class="userPanel">
 						<div class="layoutFluid">
 							<ul class="userPanelItems">
 								<li id="userMenu" class="dropdown">
@@ -26,9 +26,12 @@
 								</li>
 							</ul>
 						</div>
-					</nav>
+					</nav>#}
 					<div id="logo" class="logo">
-						<a href="{{ url('_homepage') }}"><h1>Lizenzinfos</h1></a>
+						<a href="{{ url('_homepage') }}">
+							<h1>Lizenzinfos</h1>
+							<img src="{{ asset('bundles/pzslicenseinfo/images/wcfLogo2.svg ') }}" alt="" style="height: 50px; width: 502px;" />
+						</a>
 					</div>
 					{#<nav class="navigation navigationHeader">
 
