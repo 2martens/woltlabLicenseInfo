@@ -1,0 +1,52 @@
+{% extends 'PzSLicenseInfoBundle::form.html.twig' %}
+
+{% block headline %}Angaben zur Lizenzsituation{% endblock %}
+{% block formAction %}{{ url('_result') }}{% endblock %}
+
+
+{% block fieldsets %}
+    <fieldset>
+		<dl>
+			<dt><label for="kundeJaNein">Neu- oder Bestandskunde?</label></dt>
+			<dd>
+				<select id="kundeJaNein" name="kundeJaNein" class="formField">
+					<option value="0">Neukunde</option>
+                    <option value="1">Bestandskunde</option>
+				</select>
+			</dd>
+		</dl>
+        <dl id="wbb31Neu">
+            <dt><label for="wbb31NeuJaNein">WBB 3.1 direkt gekauft?</label></dt>
+            <dd>
+                <select id="wbb31NeuJaNein" name="wbb31NeuJaNein" class="formField">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </select>
+            </dd>
+        </dl>
+        <dl id="updateZugang31">
+            <dt><label for="updateZugang31JaNein">Hatten Sie nach Erwerb des WBB 3.1 einmal einen Updatezugang?</label></dt>
+            <dd>
+                <select id="updateZugang31JaNein" name="updateZugang31JaNein" class="formField">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </select>
+            </dd>
+        </dl>
+        <dl id="updateZugang30">
+            <dt><label for="updateZugang30JaNein">Haben Sie nach Erscheinen des WBB 3.1 einen Updatezugang erworben?</label></dt>
+            <dd>
+                <select id="updateZugang30JaNein" name="updateZugang31JaNein" class="formField">
+                    <option value="1">Ja</option>
+                    <option value="0">Nein</option>
+                </select>
+            </dd>
+        </dl>
+	</fieldset>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/pzslicenseinfo/js/form.js') }}"></script>
+    }
+{% endblock %}

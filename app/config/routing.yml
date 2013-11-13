@@ -1,0 +1,4 @@
+pz_s_license_info:
+    resource: "@PzSLicenseInfoBundle/Resources/config/routing.yml"
+    prefix:   /
+

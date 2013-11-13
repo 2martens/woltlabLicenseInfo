@@ -1,0 +1,16 @@
+{% extends 'PzSLicenseInfoBundle::base.html.twig' %}
+
+{% block body %}
+    {{ parent() }}
+	<form method="post" action="{% block formAction %}{% endblock %}">
+    	<div class="container containerPadding marginTop shadow">
+            {% block fieldsets %}
+            {% endblock %}
+    	</div>
+    	<div class="formSubmit">
+    		<input type="reset" value="Zurücksetzen" accesskey="r" />
+    		<input type="submit" value="Absenden" accesskey="s" />
+            {% block hiddenInputs %}{% endblock %}
+    	</div>
+    </form>	
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends 'PzSLicenseInfoBundle::base.html.twig' %}
+
+{% block headline %}Auswertung der Lizenzsituation{% endblock %}
+
+{% block body %}
+ {{ parent() }}
+ <p class="{{ status }}">{{ message }}</p>
+{% endblock %}

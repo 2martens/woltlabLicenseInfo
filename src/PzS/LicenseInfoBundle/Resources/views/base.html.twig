@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			{% block title %}
+				Informationen zur neuen Lizenzlage
+			{% endblock %}
+		</title>
+		<meta charset="utf-8" />
+
+		{% block stylesheets %}
+            <link href="{{ asset('bundles/pzslicenseinfo/css/style.css') }}" rel="stylesheet" />
+        {% endblock %}
+	</head>
+	<body>
+		<a id="top"></a>
+		{% block header %}
+			
+			<header id="pageHeader" class="layoutFluid">
+				<div>
+					<nav id="topMenu" class="userPanel">
+						<div class="layoutFluid">
+							<ul class="userPanelItems">
+								<li id="userMenu" class="dropdown">
+									<a class="drop downToggle framed" data-toggle="userMenu">Test</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div id="logo" class="logo">
+						<a href="{{ url('_homepage') }}"><h1>Lizenzinfos</h1></a>
+					</div>
+					{#<nav class="navigation navigationHeader">
+
+					</nav>#}
+				</div>
+			</header>
+		{% endblock %}
+		<div id="main">
+			<div>
+				<div>
+					<section id="content" class="content">
+						{% block body %}
+							<header class="boxHeadline">
+								<h1>{% block headline %}{% endblock %}</h1>
+							</header>
+						{% endblock %}
+					</section>
+				</div>
+			</div>
+		</div>
+		{% block javascripts %}
+			<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.1/jquery.min.js"></script>
+        {% endblock %}
+	</body>
+</html>
